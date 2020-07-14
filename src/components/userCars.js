@@ -6,52 +6,52 @@ import { MDBIcon } from "mdbreact";
 import UserCar from "./userCar";
 
 export default function UserCars() {
-  const [userCars, setUserCars] = useState([]);
+    const [userCars, setUserCars] = useState([]);
 
-  async function getCarsUser() {
-    try {
-      const token = await localStorage.getItem("@caroster:token");
+    async function getCarsUser() {
+        try {
+            const token = await localStorage.getItem("@caroster:token");
 
-      const response = await api.get("/user/cars", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+            const response = await api.get("/user/cars", {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
 
-      setUserCars(response.data);
-    } catch (error) {
-      console.log(error);
+            setUserCars(response.data);
+        } catch (error) {
+            console.log(error);
+        }
     }
-  }
 
-  useEffect(() => {
-    getCarsUser();
-  }, []);
+    useEffect(() => {
+        getCarsUser();
+    }, []);
 
-  return (
-    <div>
-      <div
-        className="row mx-auto d-flex justify-content-around rounded-top"
-        style={{ height: "40px", background: "#30475e" }}
-      >
-        <div className="align-self-center">
-          <MDBIcon icon="car-alt" size="2x" className="white-text" />
+    return (
+        <div>
+            <div
+                className="row mx-auto d-flex justify-content-around rounded-top"
+                style={{ height: "40px", background: "#DCDCDC" }}
+            >
+                <div className="align-self-center">
+                    <MDBIcon icon="car-alt" size="2x" />
+                </div>
+                <div className="align-self-center font-weight-normal">Mes voitures</div>
+                <div className="align-self-center">
+                    <Link to="/add_user_cars">
+                        <button>
+                            <MDBIcon icon="plus" className="mr-2" />
+                            <MDBIcon icon="car-side" />
+                        </button>
+                    </Link>
+                </div>
+            </div>
+            {userCars.length === 0 ? (
+                <div className="mt-3 text-muted">Aucune voiture !</div>
+            ) : (
+                <UserCar userCars={userCars} />
+            )}
         </div>
-        <div className="align-self-center text-white">Mes voitures</div>
-        <div className="align-self-center">
-          <Link to="/add_user_cars">
-            <button>
-              <MDBIcon icon="plus" className="mr-2" />
-              <MDBIcon icon="car-side" />
-            </button>
-          </Link>
-        </div>
-      </div>
-      {userCars.length === 0 ? (
-        <div className="mt-3 text-muted">Aucune voiture !</div>
-      ) : (
-        <UserCar userCars={userCars} />
-      )}
-    </div>
-  );
+    );
 }

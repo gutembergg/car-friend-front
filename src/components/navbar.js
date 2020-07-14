@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { MDBIcon } from "mdbreact";
+
 export default function NavBar() {
     return (
         <nav className="navbar navbar-expand-md bg-dark navbar-dark">
@@ -21,11 +23,13 @@ export default function NavBar() {
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
                         <Link className="nav-link" to="/register">
+                            <MDBIcon className="mr-1" icon="user-plus" />
                             S'inscrire
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/login">
+                            <MDBIcon className="mr-1" icon="sign-in-alt" />
                             Login
                         </Link>
                     </li>
