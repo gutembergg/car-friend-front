@@ -28,7 +28,6 @@ const NewEvent = () => {
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
-                            "Access-Control-Allow-Origin": "*",
                         },
                     }
                 );
@@ -40,18 +39,10 @@ const NewEvent = () => {
             }
         } else {
             try {
-                const response = await api.post(
-                    "/event",
-                    {
-                        title,
-                        email,
-                    },
-                    {
-                        headers: {
-                            "Access-Control-Allow-Origin": "*",
-                        },
-                    }
-                );
+                const response = await api.post("/event", {
+                    title,
+                    email,
+                });
                 const { _id } = response.data;
 
                 history.push(`/event/${_id}`);
