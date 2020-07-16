@@ -19,8 +19,6 @@ const AddPassenger = ({
     const user = JSON.parse(localStorage.getItem("@caroster:user"));
     const [isButtonDisabled, setIsButtonDisabled] = useState("");
 
-    console.log(carId);
-
     async function handlePassenger(e) {
         e.preventDefault();
         try {

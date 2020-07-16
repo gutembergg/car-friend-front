@@ -134,10 +134,7 @@ function Event(props) {
                     <div>
                         <div className="d-flex justify-content-center">
                             <div className="col-sm-12 col-md-8">
-                                <div
-                                    className="alert alert-secondary text-center mt-2"
-                                    role="alert"
-                                >
+                                <div className=" text-center mt-4">
                                     <h4 className="text-center">Pour commencer</h4>
                                     <p className="text-center">
                                         Ajouter votre voiture a l'évenement en cliquant sur le
@@ -222,4 +219,4 @@ function Event(props) {
     );
 }
 
-export default Event;
+export default React.memo(Event);

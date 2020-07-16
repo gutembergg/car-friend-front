@@ -17,7 +17,7 @@ export default function UserPassengerInEvent({
         <div className="card">
             <div
                 className="card-header text-dark list-group list-group-flush"
-                style={{ height: "40px", background: "#DCDCDC" }}
+                style={{ height: "40px", background: "#eeeeee" }}
             >
                 {eventsUser}
             </div>

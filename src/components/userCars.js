@@ -31,8 +31,8 @@ export default function UserCars() {
     return (
         <div>
             <div
-                className="row mx-auto d-flex justify-content-around rounded-top"
-                style={{ height: "40px", background: "#DCDCDC" }}
+                className="shadow-sm row mx-auto d-flex justify-content-around rounded-top"
+                style={{ height: "40px", background: "#eeeeee" }}
             >
                 <div className="align-self-center">
                     <MDBIcon icon="car-alt" size="2x" />

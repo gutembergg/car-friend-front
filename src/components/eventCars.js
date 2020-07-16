@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { MDBIcon } from "mdbreact";
+import { MDBIcon, MDBPopover, MDBBtn, MDBPopoverBody } from "mdbreact";
 import AddPassenger from "../components/addPassenger";
 import PassengerInCar from "../components/passengerInCar";
 import api from "../services/api";
@@ -72,8 +72,14 @@ const EventCars = props => {
                                 {props.seats}
                             </div>
                             <div className="card-text">
-                                <MDBIcon icon="phone-alt" className="mr-3" />
-                                {props.contact}
+                                <MDBIcon icon="phone-alt" className="mr-2" />
+
+                                <MDBPopover placement="right" popover clickable id="popper1">
+                                    <MDBBtn size="sm">Contact</MDBBtn>
+                                    <div>
+                                        <MDBPopoverBody>{props.contact}</MDBPopoverBody>
+                                    </div>
+                                </MDBPopover>
                             </div>
                             <div className="card-text">
                                 <MDBIcon far icon="envelope" className="mr-3" />

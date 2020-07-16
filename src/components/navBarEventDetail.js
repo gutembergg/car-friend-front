@@ -1,15 +1,13 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 
 import { MDBIcon } from "mdbreact";
 
-export default function NavBarEventDetail({ event, userCars, userPassgInEvent }) {
+function NavBarEventDetail({ event, userCars, userPassgInEvent }) {
     const user = JSON.parse(localStorage.getItem("@caroster:user"));
 
-    console.log(userCars);
-
     return (
-        <nav className="navbar navbar-expand-md p-0 navbar-dark" style={{ background: "#30475e" }}>
+        <nav className="navbar navbar-expand-md p-0 navbar-dark" style={{ background: "#393e46" }}>
             <button
                 className="navbar-toggler"
                 type="button"
@@ -90,3 +88,5 @@ export default function NavBarEventDetail({ event, userCars, userPassgInEvent })
         </nav>
     );
 }
+
+export default memo(NavBarEventDetail);
