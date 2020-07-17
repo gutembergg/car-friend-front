@@ -32,12 +32,12 @@ export default function UserCars() {
         <div>
             <div
                 className="shadow-sm row mx-auto d-flex justify-content-around rounded-top"
-                style={{ height: "40px", background: "#eeeeee" }}
+                style={{ height: "40px", background: "#c1a57b" }}
             >
                 <div className="align-self-center">
-                    <MDBIcon icon="car-alt" size="2x" />
+                    <MDBIcon className="white-text" icon="car-alt" size="2x" />
                 </div>
-                <div className="align-self-center font-weight-normal">Mes voitures</div>
+                <div className="align-self-center font-weight-normal text-white">Mes voitures</div>
                 <div className="align-self-center">
                     <Link to="/add_user_cars">
                         <button>

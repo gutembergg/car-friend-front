@@ -130,6 +130,9 @@ function Event(props) {
                 />
             )}
             <div className="container">
+                <h3 className="text-center mt-3">
+                    <strong>{event.title}</strong>
+                </h3>
                 {cars.length === 0 && errorMessage.length === 0 ? (
                     <div>
                         <div className="d-flex justify-content-center">

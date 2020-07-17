@@ -127,7 +127,7 @@ const AddEventCars = props => {
                     <form onSubmit={handleCars} data-toggle="validator">
                         <div className="card-body p-5">
                             <div className="row">
-                                <div className="col-sm-12 col-12 col-md-6">
+                                <div className="col-sm-6 col-12 col-md-6">
                                     <MDBInput
                                         label="name"
                                         outline

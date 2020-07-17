@@ -36,10 +36,10 @@ const EventCars = props => {
             <div className="row mx-auto">
                 <div className="m-2">
                     <div className="card" style={{ width: "18rem" }}>
-                        <div className="card-header">
+                        <div style={{ background: "#c1a57b" }} className="card-header">
                             <div className="row d-flex justify-content-between">
-                                <div>
-                                    <MDBIcon className="mr-2 ml-2" icon="car" />
+                                <div className="text-white">
+                                    <MDBIcon className="mr-2 ml-2 white-text" icon="car" />
                                     {props.carName}
                                 </div>
                                 <div>

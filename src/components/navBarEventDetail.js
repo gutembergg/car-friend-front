@@ -18,7 +18,6 @@ function NavBarEventDetail({ event, userCars, userPassgInEvent }) {
             </button>
 
             <div className="collapse navbar-collapse" id="collapsibleNavbarDetail">
-                <h4 className="text-light ml-3">Évenement: {event.title}</h4>
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
                         {user ? (
